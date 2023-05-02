@@ -18,9 +18,6 @@ const app = express();
 
 const uri = process.env.ATLAS_URI;
 
-app.get('/',(req,res) => {
-  res.send('it is working')
-})
 
 
 //database_connection
@@ -56,7 +53,7 @@ app.use(
 
 //cors
 const corsOptions = {
-  origin: "https://twowheelerrent.netlify.app",
+  origin: "http://localhost:3000",
   credentials: true,
   optioSuccessStatus: 200,
 };
@@ -78,7 +75,7 @@ const server = app.listen(PORT, (req, res) => {
 
 const io = socket(server, {
   cors: {
-    origin: "https://twowheelerrent.netlify.app",
+    origin: "http://localhost:3000",
     credentials: true,
   },
 });
