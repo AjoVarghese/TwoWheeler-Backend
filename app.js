@@ -53,7 +53,7 @@ app.use(
 
 //cors
 const corsOptions = {
-  origin: "http://localhost:3000",
+  origin: "https://twowheeler.onrender.com",
   credentials: true,
   optioSuccessStatus: 200,
 };
@@ -75,7 +75,7 @@ const server = app.listen(PORT, (req, res) => {
 
 const io = socket(server, {
   cors: {
-    origin: "http://localhost:3000",
+    origin: "https://twowheeler.onrender.com",
     credentials: true,
   },
 });

@@ -89,14 +89,14 @@ exports.bikeBookingController = async (req, res) => {
               },
             ],
             mode: "payment",
-            success_url: `http://localhost:3000/booking-success?userId=${user}
+            success_url: `https://twowheeler.onrender.com/booking-success?userId=${user}
                         &userName=${userName}&bikeId=${bikeId}&bikeName=${bikeDetails.vehicleName}
                         &bikeModel=${bikeDetails.vehicleModel}&image=${bikeDetails.Photo[0]}
                         &totalAmount=${totalAmount}&totalHours=${totalHours}
                         &startDate=${bookedTimeSlots.startDate}&endDate=${bookedTimeSlots.endDate}
                         &location=${location}&needHelmet=${needHelmet}
                         &paymentType=${paymentType}&couponCode=${couponCode}`,
-            cancel_url: "http://localhost:3000/booking-cancelled",
+            cancel_url: "https://twowheeler.onrender.com/booking-cancelled",
           });
 
           res.status(200).json({
